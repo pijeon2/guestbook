@@ -5,5 +5,5 @@ import visitor.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', visitor.views.guestbook, name='guestbook'),
-    path('submit/',visitor.views.submit, name='submit')
+    path('submit/',visitor.views.submit, name='submit'),
 ]
