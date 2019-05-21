@@ -1,0 +1,40 @@
+ <br>   
+    <center>
+    <h3> 흔적을 남겨주세요</h3>
+    <form action="{% url 'submit' %}">
+    <table border="1">
+    <tr>
+        <th>이름</th>
+        <td><input type="text" name="irum" size=10></td><tr>
+        <th>이메일</th>
+        <td><input type="text" name="email" size=50></td><tr>
+        <th>제목</th>
+        <td><input type="text" name="title" size=50></td><tr>
+        <th>날짜</th>
+        <td><input type="date"name=title size=50></td><tr>
+        <th>내용</th>
+        <td><textarea cols =50 rows=5 name="content"></textarea></td><tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pwd" size=20></td><tr>
+        <tr>
+        <th colspan=2>            
+            <input type="submit" value="보내기">        
+        </th>
+        </tr>
+    </form>
+        {% for m in messages.all %}
+        <tr>
+            <td>{{ m.name }}</td>
+            <td>{{ m.email }}</td>
+            <td>{{ m.title }}</td>
+            <td>{{ m.date }}</td>
+            <td>{{ m.content }}</td>
+            <td>{{ m.pwd }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+        </center>
+
+            
+
+            
